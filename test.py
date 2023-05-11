@@ -1,4 +1,5 @@
 # some other page in your web application
+import streamlit as st
 
 #from firebase import get_user_data
 import firebase_db as fdb
@@ -7,3 +8,4 @@ import firebase_db as fdb
 user_data = fdb.get_collection("April 2023")
 
 # do something with the user data...
+st.write("user_data",user_data)
