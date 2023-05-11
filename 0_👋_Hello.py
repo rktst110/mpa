@@ -14,7 +14,7 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
-import test
+
 
 LOGGER = get_logger(__name__)
 
@@ -50,3 +50,5 @@ def run():
 
 if __name__ == "__main__":
     run()
+
+import test
