@@ -16,7 +16,7 @@ docs = db.collection('Test').stream()
 for doc in docs:
     st.write(doc.id, doc.to_dict())
 """
-@st.cache_resource
+#@st.cache_resource
 def get_collection(collection_name):
     coll = db.collection(collection_name).stream()
     return coll
