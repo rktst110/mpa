@@ -1,9 +1,5 @@
 # firebase.py module
 
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import db
-
 from google.cloud import firestore
 
 
@@ -42,5 +38,4 @@ def get_user_data(user_id):
     user_ref = ref.child('users').child(user_id)
     user_data = user_ref.get()
     return user_data
-
 
