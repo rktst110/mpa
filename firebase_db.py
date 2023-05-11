@@ -16,13 +16,14 @@ docs = db.collection('Test').stream()
 for doc in docs:
     st.write(doc.id, doc.to_dict())
 """
-
+@st.cache_data
 def get_collection(collection_name):
     coll = db.collection(collection_name).stream()
     return coll
 
 
 # define a method to retrieve user data from Firebase
+
 def get_user_data(user_id):
     user_ref = ref.child('users').child(user_id)
     user_data = user_ref.get()
