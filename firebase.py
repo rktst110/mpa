@@ -4,17 +4,43 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-# initialize Firebase app with your project credentials
-cred = credentials.Certificate('/path/to/serviceAccountKey.json')
-firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://your-project-name.firebaseio.com/'
-})
+from google.cloud import firestore
 
-# create a reference to the Firebase Realtime Database
-ref = db.reference()
+
+# Authenticate to Firestore with the JSON account key.
+db = firestore.Client.from_service_account_json("nse-data-saving-2023-5hf5fgdrg-firebase-adminsdk-yzdk6-d335b442d8.json")
+"""
+# Create a reference to the Google post.
+doc_ref = db.collection("posts").document("Google")
+
+# Then get the data at that reference.
+doc = doc_ref.get()
+
+# Let's see what we got!
+st.write("The id is: ", doc.id)
+st.write("The contents are: ", doc.to_dict())
+"""
+
+
+#doc_ref = db.collection("April 2023").document("13 April 2023")
+#docs = db.collection("Test").document("DocTest")
+
+"""
+docs = db.collection('Test').stream()
+#st.write(docs)
+for doc in docs:
+    st.write(doc.id, doc.to_dict())
+"""
+
+def get_collection(collection_name):
+    coll = db.collection(collection_name).stream()
+    return coll
+
 
 # define a method to retrieve user data from Firebase
 def get_user_data(user_id):
     user_ref = ref.child('users').child(user_id)
     user_data = user_ref.get()
     return user_data
+
+
