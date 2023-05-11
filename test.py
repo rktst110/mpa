@@ -8,6 +8,6 @@ import firebase_db as fdb
 user_data = fdb.get_collection("May 2023")
 
 # do something with the user data...
-st.write("user_data",user_data)
+#st.write("user_data",user_data)
 for doc in user_data:
     st.write(doc.id, doc.to_dict())
