@@ -34,4 +34,4 @@ st.write('You selected:', option)
 
 
 with container:
-    st.selectbox("Select Trading Date", availabe_Trading_Dates)
+    st.selectbox("Select Trading Date", availabe_Trading_Dates, key="selectBox1")
