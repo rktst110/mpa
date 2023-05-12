@@ -1,6 +1,6 @@
 import streamlit as st
 
-container = st.beta_container()
+container = st.container()
 
 with container:
     # elements to display in the container
