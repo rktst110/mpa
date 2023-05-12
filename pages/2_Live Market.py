@@ -22,3 +22,12 @@ for doc in user_data:
     #st.write(doc.id, doc.to_dict())
     st.write(doc.id)
     #st.json( doc.to_dict() )
+
+
+
+
+option = st.selectbox(
+    'How would you like to be contacted?',
+    (Object.keys(user_data)))
+
+st.write('You selected:', option)
