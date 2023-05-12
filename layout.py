@@ -1,3 +1,5 @@
+import streamlit as st
+
 container = st.beta_container()
 
 with container:

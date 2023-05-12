@@ -22,7 +22,6 @@ from utils import show_code
 
 st.set_page_config(page_title="testing title", page_icon="📈")
 
-st.sidebar.header("testing Demo")
 st.write(
     """testing through custom page in multiple pages """
 )
