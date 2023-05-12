@@ -12,6 +12,11 @@ with container:
     
 
 
+def on_trading_date_selected(new_value):
+    # Do something with the new value of the selectbox
+    st.write("Selected trading date:", new_value)
+
+
 # Get user data for user with ID 123
 user_data = fdb.get_collection("April 2023")
 
@@ -20,4 +25,7 @@ available_trading_dates = [doc.id for doc in user_data]
 
 # Display a select box with the available trading dates
 with container:
-    st.selectbox("Select Trading Date", available_trading_dates)
+    selected_trading_date = st.selectbox("Select Trading Date", available_trading_dates)
+
+# Call the `on_trading_date_selected()` function when the value of the selectbox changes
+selected_trading_date.on_change(on_trading_date_selected)
