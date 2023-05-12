@@ -2,7 +2,7 @@ import firebase_db as fdb
 import streamlit as st
 from layout import container
 
-st.set_page_config(page_title="Live Market Page", page_icon="📈")
+#st.set_page_config(page_title="Live Market Page", page_icon="📈")
 st.write("Testing through custom page in multiple pages")
 
 # Get user data for user with ID 123
