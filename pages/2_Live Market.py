@@ -16,18 +16,20 @@ st.write(
 # get user data for user with ID 123
 user_data = fdb.get_collection("May 2023")
 
+availabe_Trading_Dates = []  # create an empty list
+
 # do something with the user data...
 st.write("user_data",user_data)
 for doc in user_data:
     #st.write(doc.id, doc.to_dict())
-    st.write(doc.id)
     #st.json( doc.to_dict() )
-
-
+    st.write(doc.id)
+    availabe_Trading_Dates.append(doc.id)
+    
 
 
 option = st.selectbox(
     'How would you like to be contacted?',
-    (Object.keys(user_data)))
+    (availabe_Trading_Dates))
 
 st.write('You selected:', option)
