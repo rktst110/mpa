@@ -21,4 +21,4 @@ st.write("user_data",user_data)
 for doc in user_data:
     #st.write(doc.id, doc.to_dict())
     st.write(doc.id)
-    st.json( doc.to_dict() )
+    #st.json( doc.to_dict() )
