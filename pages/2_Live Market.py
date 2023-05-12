@@ -1,5 +1,5 @@
 import firebase_db as fdb
-#import streamlit as st
+import streamlit as st
 import layout
 
 #import test
