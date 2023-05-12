@@ -1,9 +1,6 @@
 import streamlit as st
-import inspect
-import textwrap
-import time
-import numpy as np
-from utils import show_code
+import layout
+
 
 import firebase_db as fdb
 #import test
@@ -19,17 +16,17 @@ user_data = fdb.get_collection("May 2023")
 availabe_Trading_Dates = []  # create an empty list
 
 # do something with the user data...
-st.write("user_data",user_data)
+#st.write("user_data",user_data)
 for doc in user_data:
     #st.write(doc.id, doc.to_dict())
     #st.json( doc.to_dict() )
-    st.write(doc.id)
+    #st.write(doc.id)
     availabe_Trading_Dates.append(doc.id)
     
 
 
 option = st.selectbox(
-    'How would you like to be contacted?',
+    'Select Trading Date',
     (availabe_Trading_Dates))
 
 st.write('You selected:', option)
