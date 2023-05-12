@@ -7,7 +7,7 @@ container = st.container()
 with container:
     # elements to display in the container
     st.header("Container")
-    st.set_page_config(page_title="Live Market Page", page_icon="📈")
+    #st.set_page_config(page_title="Live Market Page", page_icon="📈")
     st.write("This is a container")
     
 
