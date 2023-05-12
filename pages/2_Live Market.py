@@ -1,6 +1,6 @@
 import firebase_db as fdb
 import streamlit as st
-import layout
+from layout import container
 
 #import test
 
@@ -31,3 +31,7 @@ option = st.selectbox(
     (availabe_Trading_Dates))
 
 st.write('You selected:', option)
+
+
+with container:
+    st.selectbox("Select Trading Date", available_trading_dates)
